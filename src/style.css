@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    outline: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'OPPO Sans 4.0';
+    src: url('src/assets/font/OPPO Sans 4.0.ttf');
+}
+
+html, body {
+    background: radial-gradient(circle at 5% 15%, rgba(255, 228, 225, 0.7) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(255, 240, 220, 0.6) 0%, transparent 45%),
+    radial-gradient(circle at 50% 95%, rgba(255, 250, 250, 0.8) 0%, transparent 50%);
+    font-family: 'OPPO Sans 4.0', 'Microsoft YaHei UI', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#app {
+    position: relative;
+    height: 100vh;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.content-title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #4a90e2;
+}
+.el-image {
+    width: 100%;
+    height: 100%;
+}
+
+.my-card {
+    text-align: center;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.my-card:hover {
+    transform: translateY(-20px);
+}
