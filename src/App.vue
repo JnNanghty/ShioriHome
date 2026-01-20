@@ -13,8 +13,8 @@ import NavBar from "./NavBar.vue";
           <component :is="Component"/>
         </transition>
       </router-view>
+      <el-footer>© 栞栞shiori 个人主页</el-footer>
     </el-main>
-    <el-footer>© 栞栞shiori 个人主页</el-footer>
   </el-container>
 </template>
 
@@ -29,6 +29,10 @@ import NavBar from "./NavBar.vue";
 
 .main {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 footer {
