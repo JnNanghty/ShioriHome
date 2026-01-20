@@ -48,6 +48,7 @@ html, body {
     height: 100%;
 }
 
+/* 一个hover上浮的卡片 */
 .my-card {
     text-align: center;
     cursor: pointer;
@@ -55,5 +56,6 @@ html, body {
 }
 
 .my-card:hover {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
 }
+

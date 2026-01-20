@@ -13,9 +13,6 @@ onMounted(() => {
   clothesData.value = clothes[+route.query.index];
   srcList.value = clothesData.value.images.map(item => `src/assets/clothes/${clothesData.value.folder}/${item}`)
 })
-const previewImage = () => {
-
-}
 </script>
 
 <template>
@@ -33,8 +30,7 @@ const previewImage = () => {
       <div class="clothes-date">发布时间：{{ clothesData.date }}</div>
       <div class="image-list">
         <div class="my-card"
-                 v-for="(item, index) in clothesData.images"
-                 @click="previewImage(index)">
+             v-for="(item, index) in clothesData.images">
           <div class="image-wrap">
             <el-image :src="`src/assets/clothes/${clothesData.folder}/${item}`"
                       :fit="['初始小栞_3.png'].includes(item) ? 'contain' : 'cover'"
