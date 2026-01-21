@@ -1,25 +1,30 @@
 <script setup>
-import voice1 from '@/assets/voice/下头.mp4'
-import {nextTick, ref} from "vue";
+import {voice} from "@/assets/voice.js";
 
-const audio = ref(null);
-const src = ref("");
-const playAudio = () => {
-  src.value = voice1
-  nextTick(() => {
-    audio.value.play();
-  })
+const modules = import.meta.glob('@/assets/**/*.mp3', {eager: true, import: 'default'})
+const playAudio = (url) => {
+  const audio = new Audio(modules[`/src/assets/voice/${url}`])
+  audio.play()
 }
 </script>
 
 <template>
   <div>
     <div class="content-title">小栞按钮</div>
-    <audio :src="src" ref="audio" />
-    <el-button plain  size="large" @click="playAudio">好下头啊</el-button>
+    <div class="voice-content">
+      <div v-for="item in voice">
+        <el-button plain size="large" type="primary" @click="playAudio(item.url)">{{ item.name }}</el-button>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-
+.voice-content {
+  display: flex;
+  margin: 30px auto;
+  width: 1200px;
+  gap: 40px;
+  align-items: flex-start;
+}
 </style>
