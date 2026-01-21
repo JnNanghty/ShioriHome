@@ -16,7 +16,7 @@ export const gift = {
         }, {name: '钥匙扣', image: '舰礼存档/2023/6月舰礼/钥匙扣.png', activityTime: '全月'}],
         7: [{name: '獭袜', image: '舰礼存档/2023/7月舰礼/獭袜.png', activityTime: '全月'}],
         8: [{name: '半周年周边', image: '舰礼存档/2023/8月舰礼/半周年周边.png', activityTime: '8.3~8.17'}],
-        9: [{name: '泳装挂画', image: '舰礼存档/2023/9月舰礼/泳装挂画 .png', activityTime: '全月'}],
+        9: [{name: '泳装挂画', image: '舰礼存档/2023/9月舰礼/泳装挂画.png', activityTime: '全月'}],
         10: [{name: '生日周边', image: '舰礼存档/2023/10月舰礼/生日周边.png', activityTime: '全月'}],
         11: [{name: '台历', image: '舰礼存档/2023/11月舰礼/台历.png', activityTime: '全月'}],
         12: [{
