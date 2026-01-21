@@ -1,14 +1,14 @@
 <script setup>
 import {useRoute, useRouter} from "vue-router";
 import {onMounted, ref} from "vue";
-import {pets} from "../../assets/pets.js";
+import {pets} from "@/assets/pets.js";
+const modules = import.meta.glob('@/assets/**/**/*.png', { eager: true, import: 'default' })
 
 const route = useRoute();
 const router = useRouter();
 const petData = ref(null)
 onMounted(() => {
   petData.value = pets[route.query.key]
-  console.log(petData.value)
 })
 </script>
 
@@ -25,7 +25,7 @@ onMounted(() => {
 
     <template v-if="petData">
       <div class="pet-image">
-        <el-image :src="`src/assets/${petData.detailImage}`"/>
+        <el-image :src="modules[`/src/assets/${petData.detailImage}`]"/>
       </div>
       <div class="description-card">
         <h2 class="pet-name">{{ petData.name }}</h2>

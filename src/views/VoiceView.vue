@@ -1,11 +1,11 @@
 <script setup>
-
+import voice1 from '@/assets/voice/下头.mp4'
 import {nextTick, ref} from "vue";
 
 const audio = ref(null);
 const src = ref("");
 const playAudio = () => {
-  src.value = "src/assets/voice/下头.mp4"
+  src.value = voice1
   nextTick(() => {
     audio.value.play();
   })

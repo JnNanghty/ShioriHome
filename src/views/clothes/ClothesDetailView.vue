@@ -7,11 +7,11 @@ const router = useRouter();
 const route = useRoute();
 const clothesData = ref(null)
 const srcList = ref([])
+const modules = import.meta.glob('@/assets/**/**/*.png', { eager: true, import: 'default' })
 
 onMounted(() => {
-  console.log(route.query);
   clothesData.value = clothes[+route.query.index];
-  srcList.value = clothesData.value.images.map(item => `src/assets/clothes/${clothesData.value.folder}/${item}`)
+  srcList.value = clothesData.value.images.map(item => `@/assets/clothes/${clothesData.value.folder}/${item}`)
 })
 </script>
 
@@ -32,7 +32,7 @@ onMounted(() => {
         <div class="my-card"
              v-for="(item, index) in clothesData.images">
           <div class="image-wrap">
-            <el-image :src="`src/assets/clothes/${clothesData.folder}/${item}`"
+            <el-image :src="modules[`/src/assets/clothes/${clothesData.folder}/${item}`]"
                       :fit="['初始小栞_3.png'].includes(item) ? 'contain' : 'cover'"
                       :preview-src-list="srcList"
                       :initial-index="index"

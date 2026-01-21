@@ -1,7 +1,7 @@
 <script setup>
 import {pets} from "../../assets/pets.js";
 import {useRouter} from "vue-router";
-
+const modules = import.meta.glob('@/assets/**/**/*.png', { eager: true, import: 'default' })
 const router = useRouter();
 const viewDetail = (key) => {
   router.push({
@@ -18,7 +18,7 @@ const viewDetail = (key) => {
     <h1 class="content-title">栞栞家的小动物</h1>
     <div class="pets-list">
       <div class="my-card" v-for="(item, key) in pets" @click="viewDetail(key)">
-        <el-image class="pet-image" :src="`src/assets/pets/${item.name}/${item.name}.png`" fit="cover"/>
+        <el-image class="pet-image" :src="modules[`/src/assets/pets/${item.name}/${item.name}.png`]" fit="cover"/>
         <div class="pet-name">{{ item.name }}</div>
       </div>
     </div>

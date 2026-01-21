@@ -11,7 +11,7 @@ a {
 
 @font-face {
     font-family: 'OPPO Sans 4.0';
-    src: url('src/assets/font/OPPO Sans 4.0.ttf');
+    src: url('./assets/font/OPPO Sans 4.0.ttf');
 }
 
 html, body {

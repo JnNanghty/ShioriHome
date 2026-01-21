@@ -1,4 +1,6 @@
 <script setup>
+import bighead from '@/assets/bighead.png'
+
 const openShioriHome = () => {
   window.open('https://space.bilibili.com/1609526545', '_blank');
 }
@@ -6,7 +8,7 @@ const openShioriHome = () => {
 
 <template>
   <section class="content">
-    <el-image @click="openShioriHome" src="src/assets/bighead.png" class="big-head-container" fit="cover"/>
+    <el-image @click="openShioriHome" :src="bighead" class="big-head-container" fit="cover"/>
     <h1 class="pig-name">栞栞shiori</h1>
     <div class="ttk">❤獭獭栞的家❤</div>
   </section>

@@ -3,6 +3,7 @@ import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, ref} from "vue";
 import {gift} from "../../assets/gift.js";
 
+const modules = import.meta.glob('@/assets/**/**/*.png', { eager: true, import: 'default' })
 const router = useRouter();
 const route = useRoute();
 const year = ref(null)
@@ -77,7 +78,7 @@ const routerToVideo = (url) => {
       <h2 class="content-title">{{ year }}年{{ month }}月舰礼</h2>
       <div class="gift-content">
         <div v-for="item in giftData" class="gift-item my-card">
-          <el-image :src="`src/assets/gift/${item.image}`" fit="cover"/>
+          <el-image :src="modules[`/src/assets/gift/${item.image}`]" fit="cover"/>
           <el-divider/>
           <div class="link-row">
             <div class="gift-name">{{ item.name }}</div>

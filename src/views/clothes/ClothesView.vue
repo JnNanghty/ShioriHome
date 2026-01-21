@@ -1,6 +1,7 @@
 <script setup>
 import {clothes} from "../../assets/clothes.js";
 import {useRouter} from "vue-router";
+const modules = import.meta.glob('@/assets/**/**/*.png', { eager: true, import: 'default' })
 
 const router = useRouter();
 const viewDetail = (index) => {
@@ -19,7 +20,7 @@ const viewDetail = (index) => {
     <div class="clothes-list">
       <div class="my-card" v-for="(item, index) in clothes" @click="viewDetail(index)">
         <div class="clothes-image-wrap">
-          <el-image class="clothes-image" :src="`src/assets/clothes/${item.folder}/${item.name}.png`" fit="cover"/>
+          <el-image class="clothes-image" :src="modules[`/src/assets/clothes/${item.folder}/${item.name}.png`]" fit="cover"/>
         </div>
         <div class="clothes-name">{{ item.name }}</div>
         <div class="clothes-date">{{ item.date }}</div>
