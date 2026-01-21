@@ -15,7 +15,7 @@ export const gift = {
             activityTime: '全月'
         }, {name: '钥匙扣', image: '舰礼存档/2023/6月舰礼/钥匙扣.png', activityTime: '全月'}],
         7: [{name: '獭袜', image: '舰礼存档/2023/7月舰礼/獭袜.png', activityTime: '全月'}],
-        8: [{name: '半周年周边', image: '舰礼存档/2023/8月舰礼/半周年周边.jpg', activityTime: '8.3~8.17'}],
+        8: [{name: '半周年周边', image: '舰礼存档/2023/8月舰礼/半周年周边.png', activityTime: '8.3~8.17'}],
         9: [{name: '泳装挂画', image: '舰礼存档/2023/9月舰礼/泳装挂画 .png', activityTime: '全月'}],
         10: [{name: '生日周边', image: '舰礼存档/2023/10月舰礼/生日周边.png', activityTime: '全月'}],
         11: [{name: '台历', image: '舰礼存档/2023/11月舰礼/台历.png', activityTime: '全月'}],
@@ -40,16 +40,16 @@ export const gift = {
         }],
         3: [{
             name: '3D鼠标垫',
-            image: '舰礼存档/2024/3月/3D鼠标垫.jpg',
+            image: '舰礼存档/2024/3月舰礼/3D鼠标垫.png',
             activityTime: '全月',
             videoUrl: 'https://www.bilibili.com/video/BV1sS421N7ep/?spm_id_from=333.1387.list.card_archive.click&vd_source=6d98a3b52a00151f261e96ea9d7ff69f'
         }, {
             name: '手作巧克力',
-            image: '舰礼存档/2024/3月/手作巧克力.png',
+            image: '舰礼存档/2024/3月舰礼/手作巧克力.png',
             activityTime: '3.14~3.15',
             videoUrl: 'https://www.bilibili.com/video/BV1nx42127e9/?spm_id_from=333.1387.list.card_archive.click'
         }],
-        4: [{name: '亚克力摆件', image: '舰礼存档/2024/4月舰礼/亚克力摆件.jpg', activityTime: '全月'}],
+        4: [{name: '亚克力摆件', image: '舰礼存档/2024/4月舰礼/亚克力摆件.png', activityTime: '全月'}],
         5: [{
             name: '首次3D回周边',
             image: '舰礼存档/2024/5月舰礼/首次3D回周边.png',
@@ -59,7 +59,7 @@ export const gift = {
                 url: 'https://www.bilibili.com/video/BV1NE421L7hz/?spm_id_from=333.1387.list.card_archive.click'
             }]
         }],
-        7: [{name: '首次新衣周边', image: '舰礼存档/2024/7月舰礼/首次新衣周边.jpg', activityTime: '7.20~8.20'}],
+        7: [{name: '首次新衣周边', image: '舰礼存档/2024/7月舰礼/首次新衣周边.png', activityTime: '7.20~8.20'}],
         8: [{
             name: '泳装光栅色纸',
             image: '舰礼存档/2024/8月舰礼/泳装光栅色纸.png',
@@ -71,7 +71,7 @@ export const gift = {
             image: '舰礼存档/2024/9月舰礼/栞栞bee抱枕.png',
             activityTime: '9.21~10.14'
         }, {name: '栞栞bee抱枕2', image: '舰礼存档/2024/9月舰礼/栞栞bee抱枕2.png', activityTime: '9.21~10.14'}],
-        10: [{name: '国风新衣周边', image: '舰礼存档/2024/10月舰礼/国风新衣周边.jpg', activityTime: '10.15~11.15'}],
+        10: [{name: '国风新衣周边', image: '舰礼存档/2024/10月舰礼/国风新衣周边.png', activityTime: '10.15~11.15'}],
         11: [{name: '栞栞台历', image: '舰礼存档/2024/11月舰礼/栞栞台历.png', activityTime: '11.16~12.10'}],
         12: [{
             name: '手作手串蓝',
