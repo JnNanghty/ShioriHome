@@ -19,3 +19,6 @@ windows系统下载.msi即可
 只需要在对应文件夹里放入图片，并在```src/assets/gift.js```里配置好即可。 年份、月份会自动识别  
 有一点需要注意的是，新增年份的话，需要修改这个值，防止点击下一个月切换不了
 ![img.png](img.png)
+
+# 新增音频
+只需要将录制的mp3文件放在 ```src/assets/voice/``` 目录下，并在 ```src/assets/voice.js```中配置即可
