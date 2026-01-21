@@ -145,5 +145,6 @@ export const gift = {
             activityTime: '12.1~12.26',
             videoUrl: 'https://www.bilibili.com/video/BV1af2VBVE2T/?spm_id_from=333.1387.list.card_archive.click'
         }]
-    }, 2026: {}
+    }, 2026: {
+    }
 };

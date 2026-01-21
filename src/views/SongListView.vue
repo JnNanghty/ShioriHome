@@ -100,7 +100,6 @@ const currentSongsList = computed(() => {
   }
 })
 const songsByLetter = computed(() => {
-
   return groupSongsByLetter(currentSongsList.value.filter(item => (item.name.includes(searchString.value) || item.artist.includes(searchString.value)) && item.tag.includes(tag.value)));
 })
 const tags = computed(() => {
@@ -120,7 +119,6 @@ const router = useRouter();
 const scrollToLetter = (value) => {
   const targetElement = document.getElementById(`section-${value}`);
   const main = document.getElementsByTagName('main');
-  console.log(targetElement);
   if (targetElement) {
     const offsetTop = targetElement.offsetTop; // 减去导航栏高度
     main[0].scrollTo({
@@ -129,11 +127,15 @@ const scrollToLetter = (value) => {
     });
   }
 }
+
+const handle = () => {
+  console.log(songsByLetter.value)
+}
 </script>
 
 <template>
   <div>
-    <h1 class="content-title">歌单</h1>
+    <h1 class="content-title" @click="handle">歌单</h1>
     <div class="lang-filter">
       <el-button size="large" :type="defaultLang === 0 ? 'primary' : ''" round @click="defaultLang = 0, tag = ''">中文
       </el-button>
@@ -155,10 +157,10 @@ const scrollToLetter = (value) => {
     </div>
     <div class="song-list-wrap">
       <div class="song-list">
-        <template v-for="(letterSongs, letter) in songsByLetter">
+        <template v-for="letter in letters">
           <div class="song-list-item my-card"
                :id="index === 0 ? 'section-' + letter : ''"
-               v-for="(item, index) in letterSongs">
+               v-for="(item, index) in songsByLetter[letter]">
             <div class="song-name">{{ item.name }}</div>
             <div class="song-artist">{{ item.artist }}</div>
           </div>
@@ -197,6 +199,7 @@ const scrollToLetter = (value) => {
 .song-name {
   color: #2c5aa0;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .song-artist {
@@ -206,6 +209,10 @@ const scrollToLetter = (value) => {
 }
 
 .letter-filter {
+  padding: 5px 2px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
   position: sticky;
   z-index: 10;
   top: 0;
@@ -215,8 +222,18 @@ const scrollToLetter = (value) => {
 }
 
 .letter-text {
-  padding: 4px 6px;
+  padding: 6px 6px;
   cursor: pointer;
+  transition: all .3s ease;
+  color: #7db4d4;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.letter-text:hover {
+  background: rgba(74, 144, 226, 0.1);
+  color: #4a90e2;
+  font-weight: bold;
 }
 
 .song-list-item {
@@ -229,8 +246,15 @@ const scrollToLetter = (value) => {
 }
 
 .disabled-letter {
-  color: #999999;
+  color: #ccc;
   cursor: not-allowed;
+  opacity: .4;
+}
+
+.disabled-letter:hover {
+  background: inherit;
+  color: #ccc;
+  font-weight: inherit;
 }
 
 .tag-list {
