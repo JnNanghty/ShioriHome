@@ -11,7 +11,7 @@ const modules = import.meta.glob('@/assets/**/**/*.png', { eager: true, import: 
 
 onMounted(() => {
   clothesData.value = clothes[+route.query.index];
-  srcList.value = clothesData.value.images.map(item => `@/assets/clothes/${clothesData.value.folder}/${item}`)
+  srcList.value = clothesData.value.images.map(item => modules[`/src/assets/clothes/${clothesData.value.folder}/${item}`])
 })
 </script>
 
