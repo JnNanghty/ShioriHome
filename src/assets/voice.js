@@ -66,5 +66,9 @@ export const voice = [
   {
     name: '积积阳阳德',
     url: '积积阳阳德.mp3'
+  },
+  {
+    name: '嘟嘟嘟',
+    url: '嘟嘟嘟.mp3'
   }
 ]
