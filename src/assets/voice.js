@@ -122,5 +122,13 @@ export const voice = [
   {
     name: '爸爸',
     url: '爸爸.mp3'
+  },
+  {
+    name: '哇啊啊',
+    url: '哇啊啊.mp3'
+  },
+  {
+    name: '椰子鸡最难吃了',
+    url: '椰子鸡最难吃了.mp3'
   }
 ]
