@@ -10,7 +10,9 @@ import NavBar from "./NavBar.vue";
     <el-main class="main">
       <router-view v-slot="{Component}">
         <transition name="fade" mode="out-in">
-          <component :is="Component"/>
+          <keep-alive>
+            <component :is="Component"/>
+          </keep-alive>
         </transition>
       </router-view>
       <el-footer>© 栞栞shiori 个人主页</el-footer>
