@@ -11,6 +11,7 @@ import VoiceView from "../views/VoiceView.vue";
 import PetsDetail from "../views/pets/PetsDetail.vue";
 import GiftMonthSelect from "../views/gift/GiftMonthSelect.vue";
 import GiftDetail from "../views/gift/GiftDetail.vue";
+import LiveView from "@/views/LiveView.vue";
 
 
 export const routes = [
@@ -57,6 +58,7 @@ export const routes = [
     },
     {path: '/song', component: SongListView, meta: {title: '歌单'}},
     {path: '/voice', component: VoiceView, meta: {title: '小栞按钮'}},
+    {path: '/live', component: LiveView, meta: {title: '直播间'}},
 ]
 
 export const router = createRouter({
