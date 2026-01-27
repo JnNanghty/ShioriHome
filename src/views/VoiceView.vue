@@ -7,22 +7,22 @@ const playAudio = (url) => {
   const audio = new Audio(modules[`/src/assets/voice/${url}`])
   audio.play()
 }
-
+const delayTime = ref(500)
 const isPlaying = ref(false)
 const randomText = computed(() => isPlaying.value ? '我的电脑里住不下这么多小栞' : '点一下就会出现好多小栞')
 const randomPlay = async () => {
   isPlaying.value = !isPlaying.value;
   if (isPlaying.value) {
-    let keys = Object.keys(modules)
+    // let keys = Object.keys(modules)
     while (true) {
       if (!isPlaying.value) {
         break
       }
-      const index = Math.floor(Math.random() * keys.length)
-      let audioUrl = modules[keys[index]]
-      const audio = new Audio(audioUrl);
-      audio.play()
-      await delay(500)
+      const index = Math.floor(Math.random() * voice.length)
+      let audioUrl = voice[index].url
+      console.log(audioUrl)
+      playAudio(audioUrl)
+      await delay(delayTime.value)
     }
   }
 }
@@ -43,6 +43,10 @@ const delay = async (time) => {
           @click="randomPlay">
         {{ randomText }}
       </el-button>
+    </div>
+    <div class="play-setting">
+      <span class="setting-label">下一只小栞出现的间隔</span>
+      <el-input-number v-model="delayTime" />
     </div>
     <div class="voice-content">
       <div v-for="item in voice" class="voice-item">
@@ -65,5 +69,17 @@ const delay = async (time) => {
 .random-bar {
   margin-top: 20px;
   text-align: center;
+}
+
+.play-setting {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.setting-label {
+  color: var(--el-color-primary);
 }
 </style>
