@@ -1,8 +1,9 @@
 <script setup>
 import {songs} from "../assets/songs.js";
 import {songs_jp} from "../assets/songs_jp.js";
-import {computed, nextTick, onMounted, ref} from "vue";
+import {computed, nextTick, onMounted, ref, useTemplateRef} from "vue";
 import {useRouter} from "vue-router";
+import {ElMessage} from "element-plus";
 
 const defaultLang = ref(0) // 0 中文 1 日文
 const searchString = ref("");
@@ -131,10 +132,48 @@ const scrollToLetter = (value) => {
 const handle = () => {
   console.log(songsByLetter.value)
 }
+const copyText = ref('')
+const copyDom = useTemplateRef('copy-dom')
+const copy = async (name) => {
+  copyText.value = name;
+  await nextTick();
+  try {
+    await navigator.clipboard.writeText(name)
+    ElMessage({
+      message: '已复制到剪切板',
+      type: 'success',
+      plain: true
+    })
+  } catch (e) {
+    const selection = window.getSelection();
+    const range = document.createRange();
+    // 选中目标元素的所有文本
+    range.selectNodeContents(copyDom.value);
+    // 更新选区
+    selection.removeAllRanges();
+    selection.addRange(range);
+    const result = document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    if (result) {
+      ElMessage({
+        message: '已复制到剪切板',
+        type: 'success',
+        plain: true
+      })
+    } else {
+      ElMessage({
+        message: '复制失败，没有权限',
+        type: 'error',
+        plain: true
+      })
+    }
+  }
+}
 </script>
 
 <template>
   <div>
+    <span ref="copy-dom" class="hidden-copy-dom">{{ copyText }}</span>
     <h1 class="content-title" @click="handle">歌单</h1>
     <div class="lang-filter">
       <el-button size="large" :type="defaultLang === 0 ? 'primary' : ''" round @click="defaultLang = 0, tag = ''">中文
@@ -160,6 +199,7 @@ const handle = () => {
         <template v-for="letter in letters">
           <div class="song-list-item my-card"
                :id="index === 0 ? 'section-' + letter : ''"
+               @click="copy(item.name)"
                v-for="(item, index) in songsByLetter[letter]">
             <div class="song-name">{{ item.name }}</div>
             <div class="song-artist">{{ item.artist }}</div>
@@ -277,5 +317,12 @@ const handle = () => {
 }
 
 .search-input {
+}
+
+.hidden-copy-dom {
+  position: absolute;
+  top: -9999999px;
+  left: -99999999px;
+  opacity: .1;
 }
 </style>
