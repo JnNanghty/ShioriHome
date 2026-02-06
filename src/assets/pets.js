@@ -6,7 +6,7 @@ export const pets = {
         birthDate: '2023-2-3',
         neuterDate: '暂未绝育',
         description: '大家好我是獭獭栞，曾被小栞制作成抱枕、手偶、挎包。我的耳朵好像不是很好，经常听不清东西。我每天最喜欢做的事情就是看小栞直播，我喜欢天天骂她老馋、癔症，还喜欢听真正的音乐。虽然她有点虾头还动不动攻击我，但是对我还是很不错的，每次出门打猎都会给我带伴手礼回来。我要永远和她在一起❤',
-        detailImage: 'pets/獭獭栞/獭獭栞使用.jpg'
+        detailImage: 'pets/獭獭栞/獭獭栞使用.png'
     },
     nana: {
         name: 'nana',

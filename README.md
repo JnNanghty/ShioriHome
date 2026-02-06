@@ -22,3 +22,6 @@ windows系统下载.msi即可
 
 # 新增音频
 只需要将录制的mp3文件放在 ```src/assets/voice/``` 目录下，并在 ```src/assets/voice.js```中配置即可
+
+# 新增唱歌专属独轮车弹幕
+在 `src/assets/spamer.js`中添加对应弹幕即可，注意字数！ 然后如果包含右斜杠的话需要注意，在字符串中应当添加两个。
