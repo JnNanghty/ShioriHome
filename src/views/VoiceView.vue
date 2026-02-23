@@ -46,12 +46,15 @@ const delay = async (time) => {
     </div>
     <div class="play-setting">
       <span class="setting-label">下一只小栞出现的间隔</span>
-      <el-input-number v-model="delayTime" />
+      <el-input-number v-model="delayTime"/>
     </div>
     <div class="voice-content">
       <div v-for="item in voice" class="voice-item">
         <el-button plain size="large" type="primary" @click="playAudio(item.url)">{{ item.name }}</el-button>
       </div>
+    </div>
+    <div class="voice-info">
+      <el-link type="info" href="https://button.shiori.dev/" target="_blank">嫌按钮太少？点这里前往按钮站</el-link>
     </div>
   </div>
 </template>
@@ -81,5 +84,10 @@ const delay = async (time) => {
 
 .setting-label {
   color: var(--el-color-primary);
+}
+
+.voice-info {
+  margin-top: 30px;
+  text-align: center;
 }
 </style>
