@@ -1,7 +1,7 @@
 <script setup>
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, ref} from "vue";
-import {gift} from "../../assets/gift.js";
+import {gift} from "@/assets/gift.js";
 
 const modules = import.meta.glob('@/assets/**/**/*.png', { eager: true, import: 'default' })
 const router = useRouter();
@@ -36,8 +36,8 @@ const addMonth = () => {
   if (index < months.length - 1) {
     month.value = months[index + 1];
   } else {
-    const _year = year.value + 1
-    if (_year < 2026) {
+    const _year = +year.value + 1
+    if (_year < 2027) {
       year.value = _year;
       const keys = Object.keys(gift[_year]);
       month.value = keys[0]
