@@ -152,12 +152,6 @@ export const gift = {
       activityTime: '12.26~1.31'
     }],
     2: [
-      // {
-      //   mame: '3周年周边',
-      //   image: '舰礼存档/2026/2月舰礼/3周年',
-      //   activityTime: '全月',
-      //   videoUrl: 'https://www.bilibili.com/video/BV1WAZYBkEwe'
-      // },
       {
         name: 'pvc手办',
         image: '舰礼存档/2026/2月舰礼/pvc小手办.png',
