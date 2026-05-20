@@ -163,6 +163,18 @@ export const gift = {
       image: '舰礼存档/2026/3月舰礼/擦手巾.png',
       activityTime: '全月',
       videoUrl: 'https://www.bilibili.com/video/BV128P1zPE8n'
+    }],
+    4: [{
+      name: '语音钥匙扣',
+      image: '舰礼存档/2026/4月舰礼/语音钥匙扣.png',
+      activityTime: '全月',
+      videoUrl: 'https://www.bilibili.com/video/BV16dXfBeEwZ'
+    }],
+    5: [{
+      name: '小栞挂钩',
+      image: '舰礼存档/2026/5月舰礼/挂钩.png',
+      activityTime: '全月',
+      videoUrl: 'https://www.bilibili.com/video/BV1UK9qBHErb'
     }]
   }
 };
