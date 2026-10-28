@@ -175,6 +175,54 @@ export const gift = {
       image: '舰礼存档/2026/5月舰礼/挂钩.png',
       activityTime: '全月',
       videoUrl: 'https://www.bilibili.com/video/BV1UK9qBHErb'
+    }],
+    6: [
+      {
+        name: '幼稚园抱枕（40cmx40cm）',
+        image: '舰礼存档/2026/6月舰礼/幼稚园抱枕.png',
+        activityTime: '全月',
+        videoUrls: [{
+          name: '抱枕展示',
+          url: 'https://www.bilibili.com/video/BV1kXJA6AEgF'
+        }]
+      },
+      {
+        name: '幼稚园钥匙扣',
+        image: '舰礼存档/2026/6月舰礼/幼稚园钥匙扣.png',
+        activityTime: '全月'
+      },
+      {
+        name: '幼稚园吧唧',
+        image: '舰礼存档/2026/6月舰礼/幼稚园吧唧.png',
+        activityTime: '全月'
+      }
+    ],
+    7: [{
+      name: '獭獭栞U型枕',
+      image: '舰礼存档/2026/7月舰礼/獭獭栞U型枕.png',
+      activityTime: '全月',
+      videoUrls: [{
+        name: '獭獭栞U型枕展示',
+        url: 'https://www.bilibili.com/video/BV1vtMc6HEdL'
+      }]
+    }],
+    8: [{
+      name: '小栞蓝牙小键盘',
+      image: '舰礼存档/2026/8月舰礼/小栞蓝牙小键盘.png',
+      activityTime: '全月',
+      videoUrls: [{
+        name: '蓝牙键盘展示',
+        url: 'https://www.bilibili.com/video/BV1duuJ6gEpu'
+      }]
+    }],
+    9: [{
+      name: '地雷新衣舰礼',
+      image: '舰礼存档/2026/9月舰礼/地雷新衣舰礼.png',
+      activityTime: '全月',
+      videoUrls: [{
+        name: '眼罩展示',
+        url: 'https://www.bilibili.com/video/BV1PybL68EpK'
+      }]
     }]
   }
 };
